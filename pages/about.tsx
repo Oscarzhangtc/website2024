@@ -5,7 +5,7 @@ import AboutContent from "../components/aboutContent";
 
 // import Dock from '../components/dock';
 
-export const title = "More About Me";
+export const title = "About Me";
 
 export default function About() {
   // infinite canvas is a higher order component that takes a component as an argument
