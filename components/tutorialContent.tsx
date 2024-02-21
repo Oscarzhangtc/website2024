@@ -29,15 +29,15 @@ const TutorialContent = (props: infProps) => {
         </h3>
       </InfDiv>
       <InfDiv {...props} pos={pos.terms} align='left'>
-        <a className={styles.icons} href="mailto:oscarzhang@3279.com"  target="_blank" rel="noopener noreferrer">       
+        <a className={styles.icons} href="mailto:oscarzhang@3279.com"  target="_blank" rel="noreferrer">       
          <FontAwesomeIcon icon={faEnvelope as IconProp}/>
         </a>
 
-        <a className={styles.icons} href="https://www.linkedin.com/in/oscarzhangtc"  target="_blank" rel="noopener noreferrer">
+        <a className={styles.icons} href="https://www.linkedin.com/in/oscarzhangtc"  target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faLinkedinIn as IconProp} />
         </a>
 
-        <a className={styles.icons} href="https://github.com/oscarzhangtc"  target="_blank" rel="noopener noreferrer">
+        <a className={styles.icons} href="https://github.com/oscarzhangtc"  target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faGithub as IconProp} />
         </a>
 
