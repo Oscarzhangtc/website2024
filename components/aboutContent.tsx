@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { type infProps, type posDict, InfDiv } from './infiniteCanvas/infiniteDiv'
 
 import styles from '../styles/About.module.css'
@@ -16,35 +16,71 @@ interface credit {
   link: string,
 }
 
+
+const Age = () => {
+  const [age, setAge] = useState();
+
+  const tick = () => {
+    const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
+    const birthTime = new Date('2000-02-23T09:24:00');
+    setAge(((Date.now() - birthTime) / divisor).toFixed(11));
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => tick(), 25);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+  return <>{age}</>;
+};
+
 const AboutContent = (props: infProps) => {
 
 
   const credits: credit[] = [
-    {name: 'infinite canvas', link: 'https://github.com/ekzhang/dispict/tree/main/src/lib'},
-    {name: 'mac dock navigation', link: 'https://github.com/PuruVJ/macos-web'},
-    {name: 'cursor chat', link: 'https://github.com/jackyzha0/cursor-chat'},
     {name: 'cmd k', link: 'https://cmdk.paco.me/'},
+    {name: 'PLATZ', link: 'https://github.com/szgbo/platz'},
+    {name: 'infinite canvas', link: 'https://github.com/ekzhang/dispict/tree/main/src/lib'},
+    {name: 'cursor chat', link: 'https://github.com/jackyzha0/cursor-chat'}
+    
   ]
 
-  const adoptedBy = ['boboland.xyz', 'igloo.place', 'lilithyu.com']
 
   return (
     <>
       <InfDiv {...props} pos={pos.overview} align='left'>
         <h2 className={styles.title}>
-          overview
+           More About Me
         </h2>
-        <p className={styles.overview} style={{marginTop: "-7px"}}>
-          Platz&apos;s infinite canvas based template empowers creatives to present their work
-          in its most natural form.
+        <p className={styles.mediumText} style={{marginTop: "1px"}}>
+         I was born in Shanghai, raised in Hawaii, spent my teenagehood in Vancouver, and adult-hood in Boston. 
+         <br />
+         I am <Age />. <br />
+         I have also been a semi-professional dancer for over a decade. 
         </p>
       </InfDiv>
       <InfDiv {...props} pos={pos.credit} align='left'>
         <h2 className={styles.title}>
-          credit
+          More About This Site 
+        </h2>
+        <p className={styles.mediumText} style={{marginTop: "1px"}}>
+          1. Cursor Chat: Press "/" to chat real-time with others on this site. <br />
+          2. Search: CMD + K to search on this website. <br />
+          3. Infinite Canvas: Drag/scroll to find out the background behind this site is borderless. <br />
+        
+          </p>
+
+      
+      </InfDiv>
+
+      <br />
+      <InfDiv {...props} pos={pos.adopted} align='left'>
+        <h2 className={styles.titleAnnoying}>
+          Credits
         </h2>
         <p className={styles.smallText} style={{marginTop: "-7px"}}>
-          We have adopted code from the following repo and modified/optimized for our own purpose
+          Components adopted from the following repo and modified/optimized for development
         </p>
         <div className={styles.creditList}>
           {credits.map((credit) => (
@@ -54,22 +90,11 @@ const AboutContent = (props: infProps) => {
             ))}
         </div>
       </InfDiv>
-      <InfDiv {...props} pos={pos.adopted} align='left'>
-        <h2 className={styles.titleAnnoying}>
-          ADOPTED by
-        </h2>
-        <div className={styles.adoptedList} style={{marginTop: "-2px"}}>
-          {adoptedBy.map((person) => (
-            <div key={person}>
-              <a href={`https://${person}`} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", fontWeight: "300"}}>{person}</a>
-            </div>))}
-        </div>
-      </InfDiv>
       <InfDiv {...props} pos={pos.poweredby} align='center'>
         <div className={styles.adoptedList} style={{marginTop: "-2px"}}>
           <div style={{textAlign:"center"}}>
               <p style={{textDecoration: "none", fontWeight: "300", fontSize: "0.9rem", lineHeight: "1.2em"}}>
-                ENGINEERED BY L.DALU, W.MARCO, Y.MARCO, Z.SHAOBO <br></br>DESIGNED BY Z.SHAOBO
+              
               </p>
           </div>
         </div>

@@ -1,7 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Center from './infiniteCanvas/center';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import styles from '../styles/Tutorial.module.css'
+import EmailLink from '../components/EmailLink';
 
 import { type infProps, type posDict, InfDiv, InfClickDiv } from './infiniteCanvas/infiniteDiv'
 
@@ -12,6 +16,8 @@ const pos : posDict = {
   link: [offsetX, 200],
 }
 
+
+
 const TutorialContent = (props: infProps) => {
 
   return (
@@ -19,17 +25,28 @@ const TutorialContent = (props: infProps) => {
       {/* <Center {...props} /> */}
       <InfDiv {...props} pos={pos.message} align='left'>
         <h3 className={styles.message}>
-          We&apos;re designing a tutorial system that empowers those 
-          without any coding background to build their own website with ease.
+          Feel free to get in touch, you can email me at: <EmailLink />
         </h3>
       </InfDiv>
       <InfDiv {...props} pos={pos.terms} align='left'>
-        <h6 className={styles.terms}>
-          If you are a creative and are interested in creating a website with our features, <br />
-          please <a href={"https://p576j33mzl2.typeform.com/to/C78XvI3z"} target="_blank" rel="noopener noreferrer">fill out this form</a> and 
-          we&apos;d love to help / better develop our tutorial system!
-        </h6>
+        <a className={styles.icons} href="mailto:oscarzhang@3279.com" target='_blank'>       
+         <FontAwesomeIcon icon={faEnvelope as IconProp}/>
+        </a>
+
+        <a className={styles.icons} href="https://www.linkedin.com/in/oscarzhangtc" target='_blank'>
+        <FontAwesomeIcon icon={faLinkedinIn as IconProp} />
+        </a>
+
+        <a className={styles.icons} href="https://github.com/oscarzhangtc" target='_blank'>
+        <FontAwesomeIcon icon={faGithub as IconProp} />
+        </a>
+
+
+
+        
       </InfDiv>
+
+        
     </>
   )
 }

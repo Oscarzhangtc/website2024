@@ -4,11 +4,11 @@ import InfiniteCanvas from "../components/infiniteCanvas/infiniteCanvas";
 
 // import Dock from '../components/dock';
 
-import FeaturesContent from "../components/featuresContent";
+import featuresContent from "../components/featuresContent";
 
 import { type posDict } from "../components/infiniteCanvas/infiniteDiv";
 
-export const title = "Explore Features";
+export const title = "Projects by Oscar";
 
 const offsetX = -295;
 const pos: posDict = {
@@ -22,7 +22,7 @@ export default function Features() {
   // infinite canvas is a higher order component that takes a component as an argument
   const InfiniteContent = InfiniteCanvas(
     "platzFeaturesCursorChatRoom",
-    FeaturesContent
+    featuresContent
   );
   // position and zoom values are arbitrary and serve as placeholders
   return (

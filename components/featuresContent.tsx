@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import Center from './infiniteCanvas/center';
 import DockSample from './dock/dockSmaple';
+import Image from 'next/image'
+import Link from 'next/link'
+
 
 import styles from '../styles/Features.module.css'
 
@@ -8,29 +11,36 @@ import { type infProps, type posDict, InfDiv, InfClickDiv } from './infiniteCanv
 
 const offsetX = 0
 const pos : posDict = {
-  infiniteCanvas: [offsetX, -250],
-  infinteCanvasVideo: [offsetX, -35],
-  dockNavigation: [offsetX, 330],
-  sampleDock: [offsetX, 490],
-  cursorChat: [offsetX, 600],
-  cursorChatVideo: [offsetX, 770],
-  cmdk: [offsetX, 1050],
-  cmdkVideo: [offsetX, 1220],
+  firstTitle: [offsetX, -175],
+  firstDisplay: [offsetX, 50],
+  secondTitle: [offsetX, 330],
+  secondDisplay: [offsetX, 490],
+  thirdTitle: [offsetX, 730],
+  thirdDisplay: [offsetX, 900],
+
+  fourthTitle: [offsetX, 1300],
+  fourthDisplay: [offsetX, 1420],
 }
 
-const FeaturesContent = (props: infProps) => {
+
+
+
+
+
+const featuresContent = (props: infProps) => {
 
   return (
     <>
       {/* <Center {...props} /> */}
-      <InfDiv {...props} pos={pos.infiniteCanvas} >
+
+      <InfDiv {...props} pos={pos.firstTitle} >
         <h2 className={styles.title}>
-          infinite canvas
+          This website.
         </h2>
       </InfDiv>
-      <InfDiv {...props} pos={pos.infinteCanvasVideo}>
+      <InfDiv {...props} pos={pos.firstDisplay} >
         <video autoPlay loop muted playsInline
-          src={'/infCanvas.mp4'}
+          src={'/website.mov'}
           width={281} height={500}
           style={{
             height: "auto",
@@ -38,7 +48,49 @@ const FeaturesContent = (props: infProps) => {
             objectFit: "contain",
           }}/>
       </InfDiv>
-      <InfDiv {...props} pos={pos.dockNavigation} >
+
+
+      <InfDiv {...props} pos={pos.secondTitle} >
+      <h3 className={styles.title}>
+          Image Steganography
+        </h3>
+      </InfDiv>
+      <InfDiv {...props} pos={pos.secondDisplay} >
+
+        <Link href="https://github.com/Oscarzhangtc"className={styles.hover} >
+
+        <Image 
+        src="/ImageSteganography.jpg"
+        width={300} height={300}
+        alt="Picture of the project"     
+        />    
+
+        </Link>
+      </InfDiv>
+        
+      <InfDiv {...props} pos={pos.thirdTitle} >
+        <h2 className={styles.title}>
+          Computational Art
+        </h2>
+      </InfDiv>
+      <InfDiv {...props} pos={pos.thirdDisplay} >
+
+        <Link href="https://github.com/Oscarzhangtc"className={styles.hover} >
+        
+        <p className={styles.mediumText} style={{marginTop: "1px"}}>
+        
+        </p>
+
+        <Image 
+        src="/computationalart.jpg"
+        width={300} height={300}
+        alt="Picture of the project"     
+        />    
+
+        </Link>
+      </InfDiv>
+
+      {/* <InfDiv {...props} pos={pos.dockNavigation} >
         <h2 className={styles.title}>
           Dock Navigation
         </h2>
@@ -47,39 +99,19 @@ const FeaturesContent = (props: infProps) => {
         <div className={styles.sampleDock}>
           <DockSample />
         </div>
-      </InfClickDiv>
-      <InfDiv {...props} pos={pos.cursorChat} >
+      </InfClickDiv> */}
+      <InfDiv {...props} pos={pos.fourthTitle} >
         <h2 className={styles.title}>
-          cursor chat
+         Trench 
         </h2>
+        <p className={styles.mediumsText}>   a decentralized social network that solves deep-fake and identity theft issues. Coming soon! </p>
+        <br />
+
       </InfDiv>
-      <InfDiv {...props} pos={pos.cursorChatVideo} >
-        <video autoPlay loop muted playsInline
-          src={'/cursorChat.mp4'}
-          width={281} height={500}
-          style={{
-            height: "auto",
-            width: "500px",
-            objectFit: "contain",
-          }}/>
-      </InfDiv>
-      <InfDiv {...props} pos={pos.cmdk} >
-        <h2 className={styles.title}>
-          cmdk
-        </h2>
-      </InfDiv>
-      <InfDiv {...props} pos={pos.cmdkVideo} >
-        <video autoPlay loop muted playsInline
-          src={'/cmdk.mp4'}
-          width={281} height={500}
-          style={{
-            height: "auto",
-            width: "500px",
-            objectFit: "contain",
-          }}/>
-      </InfDiv>
+
+
     </>
   )
 }
 
-export default FeaturesContent;
+export default featuresContent;

@@ -5,7 +5,7 @@ import TutorialContent from "../components/tutorialContent";
 
 // import Dock from '../components/dock';
 
-export const title = "Tutorial & Docs";
+export const title = "Contact Me";
 
 export default function Tutorial() {
   // infinite canvas is a higher order component that takes a component as an argument

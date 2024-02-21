@@ -40,7 +40,7 @@ export default function PageContent = (props: infProps) => {
   )
 }
 ```
-### Page.module.css
+### Page.
 ```css
 .title {
   font-size: 48px;
