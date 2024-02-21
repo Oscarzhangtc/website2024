@@ -65,7 +65,7 @@ const AboutContent = (props: infProps) => {
           More About This Site 
         </h2>
         <p className={styles.mediumText} style={{marginTop: "1px"}}>
-          1. Cursor Chat: Press "/" to chat real-time with others on this site. <br />
+          1. Cursor Chat: Press &ldquo;/&ldquo; to chat real-time with others on this site. <br />
           2. Search: CMD + K to search on this website. <br />
           3. Infinite Canvas: Drag/scroll to find out the background behind this site is borderless. <br />
         

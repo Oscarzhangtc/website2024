@@ -26,11 +26,11 @@ const HomeContent = (props: infProps) => {
       <h4>
       <br />
 
-      Hi, I'm Oscar. I am passionate about building net-postive products. <br />
+      Hi, I&apos;m Oscar. I am passionate about building net-postive products. <br />
       I am currently a Product Manager at <a href={"https://www.capitalonecareers.com/full-time-programs"} target="_blank" rel="noopener noreferrer">Capital One</a>.
       <br />
-      Previously, I worked as product manager on <a href="https://www.microsoft.com/en-us/microsoft-viva/topics">Viva Topics</a> at Microsoft, and <a href="https://aws.amazon.com/partners/saas-boost/">Boost</a> at AWS. <br />
-      Prior to becoming a PM I did software engineering and machine learning at <a href={"https://en.wikipedia.org/wiki/JD.com"} target="_blank" >JD.com</a>, and dabbled <br /> into venture capital at <a href={"https://sosv.com/"}>SOSV</a>. 
+      Previously, I worked as product manager on <a href="https://www.microsoft.com/en-us/microsoft-viva/topics" target="_blank" rel="noopener" >Viva Topics</a> at Microsoft, and <a href="https://aws.amazon.com/partners/saas-boost/">Boost</a> at AWS. <br />
+      Prior to becoming a PM I did software engineering and machine learning at <a href={"https://en.wikipedia.org/wiki/JD.com"} target="_blank" rel="noopener" >JD.com</a>, and dabbled <br /> into venture capital at <a href={"https://sosv.com/"}>SOSV</a>. 
       <br />
 
       This is my CV, and you can also find me on Linkedin. Or email me at: <EmailLink />
