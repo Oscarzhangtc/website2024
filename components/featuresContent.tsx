@@ -57,7 +57,7 @@ const featuresContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.secondDisplay} >
 
-        <Link href="https://github.com/Oscarzhangtc"className={styles.hover} >
+        <Link href="https://github.com/Oscarzhangtc/ImageSteganography"className={styles.hover} >
 
         <Image 
         src="/image.jpg"
@@ -75,7 +75,7 @@ const featuresContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.thirdDisplay} >
 
-        <Link href="https://github.com/Oscarzhangtc"className={styles.hover} >
+        <Link href="https://github.com/Oscarzhangtc/ComputationalArt"className={styles.hover} >
         
         <p className={styles.mediumText} style={{marginTop: "1px"}}>
         
