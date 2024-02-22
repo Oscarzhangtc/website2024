@@ -18,12 +18,12 @@ interface credit {
 
 
 const Age = () => {
-  const [age, setAge] = useState();
-
+  const [age, setAge] = useState<number | undefined>(); // Specify the type as number | undefined
+   
   const tick = () => {
     const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
     const birthTime = new Date('2000-02-23T09:24:00');
-    setAge(((Date.now() - birthTime) / divisor).toFixed(11));
+    setAge(((Date.now() - birthTime.getTime()) / divisor)); // Ensure to call getTime() to get the milliseconds
   };
 
   useEffect(() => {
