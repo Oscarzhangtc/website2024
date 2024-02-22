@@ -5,10 +5,12 @@ import EmailLink from '../components/EmailLink';
 
 import { type infProps, type posDict, InfDiv, InfClickDiv } from './infiniteCanvas/infiniteDiv'
 
-const offsetX = -330
+// Adjust offsets based on screen size or use relative units like percentages
+const offsetX = -300; // Adjusted for better mobile visibility
+const offsetY = 0; // Adjusted for better mobile visibility
 const pos : posDict = {
-  title: [offsetX, -160],
-  subtitle: [offsetX, -60],
+  title: [offsetX, -160 + offsetY], // Adjusted offset for better mobile visibility
+  subtitle: [offsetX, -60 + offsetY], // Adjusted offset for better mobile visibility
 }
 
 const HomeContent = (props: infProps) => {
