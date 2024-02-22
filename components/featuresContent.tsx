@@ -60,7 +60,7 @@ const featuresContent = (props: infProps) => {
         <Link href="https://github.com/Oscarzhangtc"className={styles.hover} >
 
         <Image 
-        src="/ImageSteganography.jpg"
+        src="/image.jpg"
         width={300} height={300}
         alt="Picture of the project"     
         />    
