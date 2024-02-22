@@ -9,7 +9,7 @@ import EmailLink from '../components/EmailLink';
 
 import { type infProps, type posDict, InfDiv, InfClickDiv } from './infiniteCanvas/infiniteDiv'
 
-const offsetX = -350;
+const offsetX = -287.5;
 const pos : posDict = {
   message: [offsetX, -50],
   terms: [offsetX, 30],
