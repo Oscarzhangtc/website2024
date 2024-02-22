@@ -32,7 +32,9 @@ const Age = () => {
       clearInterval(timer);
     };
   }, []);
-  return <>{age}</>;
+  const formattedAge = age !== undefined ? age.toFixed(10) : '';
+
+  return <span style={{ width: '110px', display: 'inline-block' }}>{formattedAge}</span>;
 };
 
 const AboutContent = (props: infProps) => {
@@ -56,7 +58,7 @@ const AboutContent = (props: infProps) => {
         <p className={styles.mediumText} style={{marginTop: "1px"}}>
          I was born in Shanghai, raised in Hawaii, spent my teenagehood in Vancouver, and adult-hood in Boston. 
          <br />
-         I am <Age />. <br />
+         I am <Age /> years old. <br />
          I have also been a semi-professional dancer for over a decade. 
         </p>
       </InfDiv>
