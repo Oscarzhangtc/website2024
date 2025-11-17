@@ -14,7 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@tldraw/vec": "^1.8.0",
-    "@types/node": "18.11.18",
+    "@types/node": "22.11.18",
     "@types/react": "18.0.26",
     "@use-gesture/vanilla": "^10.2.23",
     "autoprefixer": "^10.4.17",
