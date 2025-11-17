@@ -22,7 +22,7 @@ const Age = () => {
    
   const tick = () => {
     const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('2000-02-23T09:24:00');
+    const birthTime = new Date('2014-02-23T09:24:00');
     setAge(((Date.now() - birthTime.getTime()) / divisor)); // Ensure to call getTime() to get the milliseconds
   };
 
@@ -58,7 +58,7 @@ const AboutContent = (props: infProps) => {
         <p className={styles.mediumText} style={{marginTop: "1px"}}>
          I was born in Shanghai, raised in Hawaii, spent my teenagehood in Vancouver, and adult-hood in Boston. 
          <br />
-         I am <Age /> years old. <br />
+         I have been building on the web for <Age /> years. <br />
          I have also been a semi-professional dancer for over a decade. 
         </p>
       </InfDiv>
